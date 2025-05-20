@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Starwors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="creator">Yaradıcı: Elmir</div>
+  <canvas id="gameCanvas"></canvas>
+  <div id="usernameInput">
+    <label>Adını yaz:</label>
+    <input type="text" id="username" maxlength="20" />
+    <button onclick="startGame()">Başla</button>
+  </div>
+  <div id="settings">
+    <button onclick="toggleSettings()">Ayarlar</button>
+    <div id="settingsPanel">
+      <label><input type="checkbox" id="soundToggle" checked /> Səs</label>
+      <label>Həssasiyyət:
+        <input type="range" id="sensitivity" min="1" max="10" value="5" />
+      </label>
+    </div>
+  </div>
+  <div id="gameOverScreen" style="display:none;">
+    <h2>Game Over</h2>
+    <p id="finalScoreText"></p>
+    <p id="highScoreText"></p>
+    <button onclick="restartGame()">Yenidən başla</button>
+  </div>
+  <audio id="shootSound" src="piu.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
